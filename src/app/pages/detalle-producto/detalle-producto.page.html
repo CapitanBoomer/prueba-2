@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Informacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-avatar name="storefront-outline"></ion-avatar>
+    </ion-card-header>
+
+    <ion-card-header>
+      <ion-card-title>producto 1</ion-card-title>
+      <ion-card-subtitle>informacion del producto</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Aqui estarìa la informacion del producto
+    </ion-card-content>
+    <ion-card-content>
+      <ion-button color="success" [routerLink]="['/carrito']">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item>
+      Nombre: <input type="text">
+    </ion-item>
+    <ion-item>
+      Apellido: <input type="text">
+    </ion-item>
+    <ion-item>
+      Edad: <input type="number">
+    </ion-item>
+    <ion-item>
+      Nombre de usuario: <input type="text">
+    </ion-item>
+    <ion-item>
+      contraseña: <input type="text">
+    </ion-item>
+    <ion-item>
+      Fecha de nacimiento: <input type="text">
+    </ion-item>
+    <ion-item>
+      genero: <input type="text">
+    </ion-item>
+    <ion-card-content [routerLink]="['/login']">
+      <ion-button>
+        <ion-icon slot="icon-only" name="checkmark-outline" ></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
