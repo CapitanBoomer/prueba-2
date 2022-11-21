@@ -5,23 +5,40 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-avatar name="storefront-outline"></ion-avatar>
-    </ion-card-header>
-
-    <ion-card-header>
-      <ion-card-title>producto 1</ion-card-title>
-      <ion-card-subtitle>informacion del producto</ion-card-subtitle>
-    </ion-card-header>
-
+  <ion-card *ngIf="producto">
     <ion-card-content>
-      Aqui estarìa la informacion del producto
+      <img [src]="[producto.thumbnail]" alt="">
+      <ion-card-subtitle>{{producto.category}}</ion-card-subtitle>
+      <ion-card-title>{{producto.title}}</ion-card-title>
+      <ion-card-subtitle>{{producto.brand}}</ion-card-subtitle>
     </ion-card-content>
     <ion-card-content>
-      <ion-button color="success" [routerLink]="['/carrito']">
-        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
-      </ion-button>
+      <h3>detalles de compra:</h3>
+      Precio: ${{producto.price}}<br>
+      Descuento:{{producto.discountPercentage}}% <br>
+      Disponibles:{{producto.stock}}
     </ion-card-content>
+    <ion-card-content>
+      <h3>Popularidad:</h3>
+      <h5>{{producto.rating}}</h5>
+    </ion-card-content>
+
+
+
+
+    <ion-card-content>
+      <h3>Descripcion:</h3>
+      <h5>{{producto.description}}
+      </h5>
+    </ion-card-content>
+
+    <ion-button [routerLink]="['/lista-productos']">
+      <ion-icon name="return-up-back-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button  color="success" [routerLink]="['/lista-productos']">
+      <ion-icon name="cart-outline" ></ion-icon>
+    </ion-button>
   </ion-card>
+
 </ion-content>

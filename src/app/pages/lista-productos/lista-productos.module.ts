@@ -1,20 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 import { IonicModule } from '@ionic/angular';
 
 import { ListaProductosPageRoutingModule } from './lista-productos-routing.module';
 
 import { ListaProductosPage } from './lista-productos.page';
+import { ProductosServService } from 'src/app/servicios/productos-serv.service';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    ListaProductosPageRoutingModule
+    ListaProductosPageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [ListaProductosPage]
+  declarations: [ListaProductosPage],
+  providers:[ProductosServService]
 })
 export class ListaProductosPageModule {}

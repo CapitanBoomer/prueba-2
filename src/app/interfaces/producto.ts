@@ -1,5 +1,5 @@
-export interface Producto {
-  id: Number,
+export interface Products {
+  id: number,
   title: String,
   description: String,
   price: Number,
@@ -9,13 +9,23 @@ export interface Producto {
   brand: String,
   category: String,
   thumbnail: String,
-  images: String,
+  images:  String,
+
 
 }
 
-export interface listaProducto extends Producto {
+export interface ResultadoPeticion{
 total:	Number,
 skip:	Number,
 limit:	number,
-products:	Producto,
+products:	Array<Products>,
+}
+
+
+export interface ProductoConId extends Products{
+  id : number;
+}
+
+export interface ProductoParcial extends Partial <Products>{
+
 }

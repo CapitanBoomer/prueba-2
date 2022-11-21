@@ -1,36 +1,45 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
-    <ion-item>
-      Nombre: <input type="text">
-    </ion-item>
-    <ion-item>
-      Apellido: <input type="text">
-    </ion-item>
-    <ion-item>
-      Edad: <input type="number">
-    </ion-item>
-    <ion-item>
-      Nombre de usuario: <input type="text">
-    </ion-item>
-    <ion-item>
-      contraseña: <input type="text">
-    </ion-item>
-    <ion-item>
-      Fecha de nacimiento: <input type="text">
-    </ion-item>
-    <ion-item>
-      genero: <input type="text">
-    </ion-item>
-    <ion-card-content [routerLink]="['/login']">
-      <ion-button>
-        <ion-icon slot="icon-only" name="checkmark-outline" ></ion-icon>
-      </ion-button>
-    </ion-card-content>
+    <form [formGroup]="formularioRegistro" (keyup.enter)="guardarDatos()">
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input formControlName="lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">edad</ion-label>
+        <ion-input formControlName="age"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">username</ion-label>
+        <ion-input formControlName="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">fecha de nacimiento</ion-label>
+        <ion-input formControlName="birthDate"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">genero</ion-label>
+        <ion-input formControlName="gender"></ion-input>
+      </ion-item>
+      <ion-card-content [routerLink]="['/login']">
+        <ion-button (click)="guardarDatos()" color="success">
+          <ion-icon slot="icon-only" name="checkmark-outline"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </form>
   </ion-card>
 </ion-content>

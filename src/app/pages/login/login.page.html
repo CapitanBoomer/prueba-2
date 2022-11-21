@@ -5,15 +5,24 @@
 </ion-header>
 
 <ion-content>
-<ion-card>
-<ion-item>
-  usuario<input type="text">
-</ion-item>
-<ion-item>
-  contraseña<input type="password">
-</ion-item>
-<ion-item>
-  <ion-button size="small" [routerLink]="['/lista-productos']">ingresar</ion-button>
-</ion-item>
-</ion-card>
+  <ion-card>
+
+      <ion-item>
+        <ion-label position="floating">usuario</ion-label>
+        <ion-input type="text" ></ion-input>
+
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" ></ion-input>
+      </ion-item>
+        <ion-item>
+          <ion-button  [routerLink]="['/lista-productos']">Iniciar sesión
+          </ion-button>
+        </ion-item>
+
+
+  </ion-card>
 </ion-content>

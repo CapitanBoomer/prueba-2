@@ -1,5 +1,5 @@
 export interface Usuario {
-  id?: string,
+  id?: number,
   firstName: string,
   lastName: string,
   age:number,
@@ -8,11 +8,11 @@ export interface Usuario {
   birthDate:string,
   gender:string,
 }
-export interface usuariomomentanio extends Usuario {
-  id:string
+export interface UsuarioParcial extends Partial <Usuario>{
+
 }
 
-export interface Usuariologin extends Usuario {
-  id:string,
+export interface Usuariologin  {
+  id:number,
   password:string
 }
